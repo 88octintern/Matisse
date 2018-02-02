@@ -69,3 +69,21 @@ task checkstyle(type:Checkstyle) {
     classpath = files()
     source 'src/main/java'
 }
+
+// プロジェクトルート配下のrepositoryディレクトリにデプロイする
+def repos = new File(rootDir, "repository")
+
+// Mavenプラグインの利用を宣言
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository url: "file://${repos.absolutePath}" // デプロイ先
+            pom.version = '0.0.1' // ライブラリバージョン
+            pom.groupId = 'com.u1aryz' // グループ名
+            pom.artifactId = 'sample-lib' // アーティファクト名
+        }
+    }
+}
+
