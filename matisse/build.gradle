@@ -80,9 +80,9 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository url: "file://${repos.absolutePath}" // デプロイ先
-            pom.version = '0.0.1' // ライブラリバージョン
-            pom.groupId = 'com.u1aryz' // グループ名
-            pom.artifactId = 'sample-lib' // アーティファクト名
+            pom.version = '1.0.0' // ライブラリバージョン
+            pom.groupId = 'andpad' // グループ名
+            pom.artifactId = 'matisse' // アーティファクト名
         }
     }
 }
