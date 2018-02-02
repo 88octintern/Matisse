@@ -1,0 +1,15 @@
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'andpad' //ライブラリ公開用のGroupドメイン
+            artifactId 'rakugaki' //ライブラリ名
+            version '1.0.6' //バージョン
+            artifact source: file("${project.buildDir}/outputs/aar/${project.name}-release.aar") //デプロイしたいアーカイブのパス
+        }
+    }
+    repositories {
+        maven {
+            url "file:${rootDir}/maven-repo" //Mavenリポジトリを作る場所の指定
+        }
+    }
+}
