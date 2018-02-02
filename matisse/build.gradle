@@ -62,7 +62,6 @@ publish {
     desc = 'A well-designed local image selector for Android'
     website = 'https://www.zhihu.com/'
 }
-
 task checkstyle(type:Checkstyle) {
     description 'Runs Checkstyle inspection against matisse sourcesets.'
     group = 'Code Quality'
