@@ -3,7 +3,7 @@ publishing {
         maven(MavenPublication) {
             groupId 'andpad' //ライブラリ公開用のGroupドメイン
             artifactId 'matisse' //ライブラリ名
-            version '1.0.0' //バージョン
+            version '1.0.1' //バージョン
             artifact source: file("${project.buildDir}/outputs/aar/${project.name}-release.aar") //デプロイしたいアーカイブのパス
         }
     }
